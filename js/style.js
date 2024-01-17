@@ -102,18 +102,37 @@ console.log(`${lightBike.name} è la bici più leggera`)
 
 const footballTeams = [
     {
-        nome: 'Cosenza',
-        puntiFatti: 0,
-        falliSubiti: 0
+        name: 'Cosenza',
+        points: 0,
+        fouls: 0
     },
     {
-        nome: 'Vigor Lamezia',
-        puntiFatti: 0,
-        falliSubiti: 0
+        name: 'Vigor Lamezia',
+        points: 0,
+        fouls: 0
     },
     {
-        nome: 'Reggina',
-        puntiFatti: 0,
-        falliSubiti: 0
+        name: 'Reggina',
+        points: 0,
+        fouls: 0
     },
 ]
+
+// Funzione per il numero casuale
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// Assegno alle squadre falli e punti random
+
+footballTeams.forEach(team => {
+    team.points = getRandomNumber(0, 100);
+    team.fouls = getRandomNumber(0, 200);
+})
+
+// Creo un nuovo Array assegnando il nuovo numero dei Falli ed il proprio nome
+
+const teamFouls = footballTeams.map(({ name, fouls }) => ({ name, fouls }));
+
+console.log(teamFouls);
