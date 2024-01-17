@@ -66,3 +66,54 @@ nameUpperCase.forEach(name => {
     studentTarget.appendChild(list)
 })
 
+// Snack 3
+
+// Creo l'array di bici
+
+const bikes = [
+    { name: 'Mountain Bike', weight: 12 },
+    { name: 'Road Bike', weight: 8 },
+    { name: 'City Bike', weight: 10 },
+    { name: 'BMX Bike', weight: 9 }
+];
+
+// Giro sull'array
+
+let lightBike = bikes[0]
+
+for (let bike of bikes) {
+    const { weight } = bike;
+
+    // Confronto la bici più leggera
+
+    if (weight < lightBike.weight) {
+        lightBike = bike
+    }
+}
+
+// La stampo in console
+
+console.log(`${lightBike.name} è la bici più leggera`)
+
+
+// Snack 4
+
+// Creo l'array di oggetti
+
+const footballTeams = [
+    {
+        nome: 'Cosenza',
+        puntiFatti: 0,
+        falliSubiti: 0
+    },
+    {
+        nome: 'Vigor Lamezia',
+        puntiFatti: 0,
+        falliSubiti: 0
+    },
+    {
+        nome: 'Reggina',
+        puntiFatti: 0,
+        falliSubiti: 0
+    },
+]
